@@ -1,0 +1,10 @@
+nginx:
+    build: ./nginx
+    links:
+        - prsbe:prsbe
+    ports:
+        - "81:81"
+prsbe:
+    build: ./node
+    ports:
+        - "8080"
